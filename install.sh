@@ -21,6 +21,7 @@ apt-get install filezilla -y
 apt-get install vim -y
 apt-get install dpkg -y
 apt-get install smartgit -y
+apt install zip unzip -y
 
 
 # Install snap packages

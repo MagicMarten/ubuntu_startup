@@ -1,10 +1,14 @@
 #!/bin/sh
 
 apt-get install software-properties-common -y
+apt-get install python-software-properties -y
 
 # Add additional repos
 add-apt-repository ppa:eugenesan/ppa
 add-apt-repository ppa:deadsnakes/ppa
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash –
 
 # Get the latest package lists
 apt-get update
@@ -18,6 +22,8 @@ apt install git -y
 apt install python3.8 -y
 apt install snapd -y
 apt install firefox -y
+apt-get install nodejs -y
+apt install yarn -y
 apt-get install filezilla -y
 apt-get install vim -y
 apt-get install dpkg -y
